@@ -10,7 +10,6 @@ collections:
         resolution: 4K
         hdr: false
     filters:
-      has_dolby_vision: false
       filepath.not: IMAX
     item_overlay: 4K
     build_collection: false
@@ -22,7 +21,6 @@ collections:
         resolution: 4K
         hdr: true
     filters:
-      has_dolby_vision: false
       filepath.not: IMAX
     item_overlay: 4K-HDR
     build_collection: false
@@ -34,7 +32,6 @@ collections:
         resolution: 4K
         hdr: true
     filters:
-      has_dolby_vision: false
       filepath: IMAX
     item_overlay: 4K-HDR-IMAX
     build_collection: false
