@@ -1,0 +1,141 @@
+######################################################
+#                 Movies 4K Overlays                 #
+######################################################
+collections:
+  IMDB:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+       collection: IMDB Top 250
+    filters:
+      has_dolby_vision: false
+      resolution.not: 4K
+    item_overlay: IMDB
+    build_collection: false
+  4K:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: false
+        collection.not: IMDB Top 250
+    filters:
+      has_dolby_vision: false
+      filepath.not: IMAX
+    item_overlay: 4K
+    build_collection: false
+  4K-IMDB:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: false
+        collection: IMDB Top 250
+    filters:
+      has_dolby_vision: false
+      filepath.not: IMAX
+    item_overlay: 4K-IMDB
+    build_collection: false       
+  4K-Dolby:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        collection.not: IMDB Top 250
+    filters:
+      has_dolby_vision: true
+      filepath.not: IMAX
+    item_overlay: 4K-Dolby
+    build_collection: false
+  4K-Dolby-IMDB:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        collection: IMDB Top 250
+    filters:
+      has_dolby_vision: true
+      filepath.not: IMAX
+    item_overlay: 4K-Dolby-IMDB
+    build_collection: false    
+  4K-Dolby-IMAX:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        collection.not: IMDB Top 250
+    filters:
+      has_dolby_vision: true
+      filepath: IMAX
+    item_overlay: 4K-Dolby-IMAX
+    build_collection: false        
+  4K-Dolby-IMAX-IMDB:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        collection: IMDB Top 250
+    filters:
+      has_dolby_vision: true
+      filepath: IMAX
+    item_overlay: 4K-Dolby-IMAX-IMDB
+    build_collection: false
+  4K-HDR:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: true
+        collection.not: IMDB Top 250
+    filters:
+      has_dolby_vision: false
+      filepath.not: IMAX
+    item_overlay: 4K-HDR
+    build_collection: false    
+  4K-HDR-IMDB:
+    test: true 
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: true
+        collection: IMDb Top 250
+    filters:
+      has_dolby_vision: false
+      filepath.not: IMAX
+    item_overlay: 4K-HDR-IMDB
+    build_collection: false
+  4K-HDR-IMAX:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: true
+        collection.not: IMDb Top 250
+    filters:
+      has_dolby_vision: false
+      filepath: IMAX
+    item_overlay: 4K-HDR-IMAX
+    build_collection: false    
+  4K-HDR-IMAX-IMDB:
+    test: true
+    revert_overlay: false
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: true
+        collection: IMDb Top 250
+    filters:
+      has_dolby_vision: false
+      filepath: IMAX
+    item_overlay: 4K-HDR-IMAX-IMDB
+    build_collection: false
